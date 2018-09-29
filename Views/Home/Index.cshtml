@@ -1,0 +1,18 @@
+﻿@model IEnumerable<Pergunta>
+
+<h1>ViewBag @ViewBag.Nome</h1>
+<h1>ViewData @ViewData["NomeDoAluno"]</h1>
+<img src="~/download.jfif" />
+
+<br /><br />
+<ul>
+    @foreach (var item in Model)
+    {
+        <li>
+            <p>@item.Id</p>
+            <p>@item.Autor</p>
+            <p>@item.Descricao</p>
+        </li>
+    }
+
+</ul>
