@@ -1,6 +1,8 @@
 ﻿using Fiap01.Data;
+using Fiap01.Middlewares;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -24,11 +26,35 @@ namespace Fiap01
             //{
             //    await context.Response.WriteAsync("Ola Fiap!!!");
             //});
+
+            /*app.Use((context, next) =>
+            {
+                context.Response.Headers.Add("X-Teste", "headerteste");
+                return next();
+            });
+
+            app.Use(async (context, next) =>
+            {
+                var teste = 123;
+                await next.Invoke();
+                var teste2 = 1234;
+            });
+
+            app.Run(async context => {
+                await context.Response.WriteAsync("boa noite");
+            });*/
+
+
             app.UseDeveloperExceptionPage();
+
             app.UseStaticFiles();
+
+            //app.UseMiddleware<LogMiddleware>();
+            app.UseMeuLogPreza();
+
             app.UseMvc(routes =>
             {
-                /* routes.MapRoute(
+                 routes.MapRoute(
                      name: "autor",
                      template: "autor/{nome}",
                      defaults: new { controller="Autor" ,action="Index"});
@@ -41,12 +67,12 @@ namespace Fiap01
                  routes.MapRoute(
                      name: "topicosDaCategoria",
                      template: "{categoria}/{topico}",
-                     defaults: new { controller = "Topico", action = "Index" });*/
-                routes.MapRoute(
-                name: "default",
-                template: "{controller=Home}/{action=Index}/{id?}");
+                     defaults: new { controller = "Topico", action = "Index" });
+             routes.MapRoute(
+             name: "default",
+             template: "{controller=Home}/{action=Index}/{id?}");
 
-            });
+         });
         }
 
     }

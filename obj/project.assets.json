@@ -14284,6 +14284,7 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
       "Microsoft.ASPNETCore.All >= 2.1.4",
+      "Microsoft.AspNetCore.Mvc.Razor.ViewCompilation >= 2.1.1",
       "Microsoft.EntityFrameworkCore.SqlServer >= 2.1.3",
       "Microsoft.EntityFrameworkCore.Tools >= 2.1.3",
       "Microsoft.NETCore.App >= 2.1.0",
@@ -14297,11 +14298,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\logonrmlocal\\Desktop\\Fiap01\\AulaDesvWeb\\Fiap01.csproj",
+      "projectUniqueName": "C:\\Users\\logonrmlocal\\Desktop\\ProjWeb\\AulaDesvWeb\\Fiap01.csproj",
       "projectName": "Fiap01",
-      "projectPath": "C:\\Users\\logonrmlocal\\Desktop\\Fiap01\\AulaDesvWeb\\Fiap01.csproj",
+      "projectPath": "C:\\Users\\logonrmlocal\\Desktop\\ProjWeb\\AulaDesvWeb\\Fiap01.csproj",
       "packagesPath": "C:\\Users\\logonrmlocal\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\logonrmlocal\\Desktop\\Fiap01\\AulaDesvWeb\\obj\\",
+      "outputPath": "C:\\Users\\logonrmlocal\\Desktop\\ProjWeb\\AulaDesvWeb\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -14334,6 +14335,10 @@
           "Microsoft.ASPNETCore.All": {
             "target": "Package",
             "version": "[2.1.4, )"
+          },
+          "Microsoft.AspNetCore.Mvc.Razor.ViewCompilation": {
+            "target": "Package",
+            "version": "[2.1.1, )"
           },
           "Microsoft.EntityFrameworkCore.SqlServer": {
             "target": "Package",
